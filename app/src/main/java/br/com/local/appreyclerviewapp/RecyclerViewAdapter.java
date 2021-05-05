@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +18,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private Context mContext;
     private List<Livros> mData;
+
+    //Construtor da classe RecyclerViewAdapter
 
     public RecyclerViewAdapter(Context mContext, List<Livros> mData) {
         this.mContext = mContext;
@@ -37,12 +40,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public int getItemCount() {
         return mData.size();
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.tvTituloLivro.setText(mData.get(position).getTitulo());
         holder.imgLivro.setImageResource(mData.get(position).getMiniatura());
+
 
     }
 

@@ -7,13 +7,14 @@ public class Livros {
     private String descricao;
     private int miniatura;
 
+    //Criando o construtor da classe
     public Livros(String titulo, String categoria, String descricao, int miniatura) {
         this.titulo = titulo;
         this.categoria = categoria;
         this.descricao = descricao;
         this.miniatura = miniatura;
     }
-
+    //Métodos de acesso
     public String getTitulo() {
         return titulo;
     }
